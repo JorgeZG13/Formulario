@@ -1,0 +1,89 @@
+/*----Generales----*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+   background-color: lightblue;
+   margin: 0;
+   font-family: Georgia;
+}
+
+.container{
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+}
+/*----Formulario----*/
+.form{
+    border: 2px solid black;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: pink;
+    color: gray;
+    
+}
+
+.r{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.forinput{
+    margin-bottom: 30px;
+}
+.forinput label{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.forinput input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid black;
+}
+.forinput input:focus + label {
+    font-weight: bold;
+    color: black;
+}
+.s{
+    color: black;
+    margin-left: 15px;
+  position: relative;
+  font-size: 13px;
+}
+.boton input{
+    background: black;
+    color: white;
+    padding: 10px 50px;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+}
+.boton input:hover{
+    background: gray;
+    transition: 0.5s;
+}
+.mensajeerror{
+    color: red;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.mensajeok{
+    text-align: center;
+}
+
