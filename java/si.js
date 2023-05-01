@@ -3,12 +3,12 @@ const apellidos = document.getElementById("surname");
 const teléfono = document.getElementById("cell");
 const correo = document.getElementById("email");
 const contraseña = document.getElementById("password");
-const contraseña2 = document.getElementById("repatpassword");
-const terminosycondiciones = document.getElementById("termsandconditions");
-const form = document.getElementById("form");
+const contraseña2 = document.getElementById("repeatpassword");
+const form = document.getElementById("sii");
 const listinputs = document.querySelectorAll(".forinput");
 
-form.addEventListener("submit", (e) => {
+
+form.addEventListener("click", (e) => {
 e.preventDefault();
 let condicion = validacionform();
 if (condicion){
@@ -53,14 +53,6 @@ if (apellidos.value.length <1 || apellidos.value.trim() == "") {
     condicion = false;
  }
 
- if (!terminosycondiciones.checked) {
-    mostrarMensaje("termsandconditions", "Acepte los términos y condiciones*");
-    condicion = false;
- } else{
-    mostrarMensaje("termsandconditions", "");
-    return condicion;
- }
-
 
 function mostrarMensaje(claseinput, mensaje){
     let elemento = document.querySelector(`.${claseinput}`);
@@ -71,3 +63,15 @@ function enviarformulario(){
     form.reset;
     form.lastElementChild.innerHTML = "Listo!!";
 }
+
+const $btnSignIn= document.querySelector('.sign-in-button'),
+      $btnSignUp = document.querySelector('.sign-up-button'),  
+      $signUp = document.querySelector('.sign-up'),
+      $signIn  = document.querySelector('.sign-in');
+
+document.addEventListener('click', e => {
+    if (e.target === $btnSignIn || e.target === $btnSignUp) {
+        $signIn.classList.toggle('active');
+        $signUp.classList.toggle('active')
+    }
+});

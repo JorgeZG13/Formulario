@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de registro</title>
+    <title>Registro y control</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>    
-    <div class="container">
-        <form action="" class="form" id="form" autocomplete="off">
-            <p class="r">Registro</p>
+<body> 
+    <div class="container sign-up">
+        <div class="welcomeback">
+            <div class="mensaje">
+            <h2>Bienvenido a Softición</h2>
+            <p>¿Ya tienes una cuenta? Por favor inicia sesión aquí</p>
+            <button class="sign-up-button">Iniciar sesión</button>
+            </div>  
+        </div>
+        <form action="" class="form" id="sii" autocomplete="off">
+            <h2 class="r">Crear cuenta</h2>
+          
  
             <div class="forinput myname">
                 <input type="text" id="myname"> 
@@ -48,20 +56,41 @@
                 <p class="mensajeerror"></p>
             </div>
 
-            <div class="s termsandconditions">
-                <input type="checkbox" id="termsandconditions">
-                <label for="termsandconditions">He leído y acepto los</label>
-                <a href="#">términos y condiciones</a>
-                <p class="mensajeerror"></p>
-            </div>
-
             <div class="boton">
-                <input type="submit" value="Enviar">
+                <input type="button" value="Registrarse">
             </div>
 
             <p class="mensajeok"></p>
          </form>
-    </div>
-    <script src="java/si.js"></script>
-</body>
-</html>
+        </div>
+        
+        
+        <div class="container sign-in">   
+            <form class="form">
+                <h2 class="r">Iniciar sesión</h2>
+                <div class="forinput lol">
+                    <input type="mail" id="lol">
+                    <label for="lol">Correo electrónico</label>
+                    
+                    <div class="forinput pass">
+                        <input type="pass" id="pass">
+                        <label for="pass">Contraseña</label>
+                        <div class="boton">
+                            <input type="button" value="Iniciar sesión">
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="welcomeback">
+                    <div class="mensaje">
+                        <h2>Bienvenido de vuelta</h2>
+                        <p>¿Aún no tienes una cuenta? Regístrate aquí...</p>
+                        <button class="sign-in-button">Registrarse</button>
+                    </div>
+                </div>
+        </div>   
+        
+            <script src="java/si.js"></script>   
+            
+        </body>
+        </html>

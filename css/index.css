@@ -1,84 +1,85 @@
 /*----Generales----*/
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    /* font-size: 'Roboto', sans-serif; */
 }
 
 body {
-   background-color: lightblue;
+   background-image: url("No.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100%;
+   display: flex;
+   align-items: center;
    margin: 0;
    font-family: Georgia;
-}
 
+}
 .container{
-    max-width: 700px;
-    margin: auto;
-    margin-top: 40px;
+    align-items: center;
+    width: 90%;
+    height: 140vh;
+    display: flex;
+    justify-content: space-around;
+    transition: all .5s ease-out;
 }
 /*----Formulario----*/
 .form{
-    border: 2px solid black;
-    max-width: 400px;
-    padding: 30px 50px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: pink;
-    color: gray;
+    width: 400px;
+    height: fit-content;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 10%;
     
 }
 
 .r{
-    font-weight: bold;
-    font-size: 30px;
     text-align: center;
-    margin: 0;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    width: 100%;
+    padding: .2rem 0;
+    font-size: 1.7rem;
     color: black;
 }
-
-.forinput{
-    margin-bottom: 30px;
+.t{
+    align-items: center;
+    width: 100%;
+    padding: 0rem 1rem;
+    margin-bottom: 0;
+    color:black
 }
+
+
 .forinput label{
     display: block;
     margin-top: 10px;
     font-size: 15px;
+    color: gray;
 }
-.forinput input{
-    width: 100%;
+.form input{
+    width: 70%;
+    display: block;
+    margin: auto;
     border: none;
     outline: none;
-    background: none;
-    border-bottom: 2px solid black;
+    background-color: transparent;
+    border-bottom: black thin solid;
+    padding: 1rem 0;
+    font-size: .9rem;
+    
 }
 .forinput input:focus + label {
     font-weight: bold;
     color: black;
 }
-.s{
-    color: black;
-    margin-left: 15px;
-  position: relative;
-  font-size: 13px;
-}
-.boton input{
-    background: black;
-    color: white;
-    padding: 10px 50px;
-    font-size: 25px;
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    border: none;
-}
-.boton input:hover{
-    background: gray;
-    transition: 0.5s;
-}
 .mensajeerror{
+    padding: .1rem 0;
     color: red;
-    margin-top: 0px;
+    margin-top: 5px;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -87,3 +88,76 @@ body {
     text-align: center;
 }
 
+.welcomeback{
+    margin-bottom: 20%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: orangered;
+}
+.mensaje{
+    padding: 1rem;
+}
+.mensaje h2{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+.mensaje button{
+    padding: 1rem;
+    font-weight: 400;
+    background-color: rgb(30, 103, 30);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: all .3s ease-in;
+    color: white;
+}
+.mensaje button:hover{
+    background-color: rgb(124, 171, 131);
+    transition: 0.5s;
+}
+.s{
+    color: black;
+    padding: .1rem 0;
+    width: 100%;
+}
+.s input{
+    display: inline;
+    width: 5%;
+}
+.form input[type="button"]{
+    width: 60%;
+    margin: auto;
+    border: solid thin black;
+    padding: .7rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    /* margin-top: 3rem; */
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: rgb(30, 103, 30);;
+    color: white;
+}
+
+.boton input:hover{
+    background-color: rgb(124, 171, 131);;
+    transition: 0.5s;
+}
+.sign-in {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.sign-in.active {
+    opacity: 1;
+    visibility: visible;
+}
+.sign-up.active{
+    opacity: 0;
+    visibility: visible;
+}
+
+.sing-up-button{
+    margin: none;
+}
